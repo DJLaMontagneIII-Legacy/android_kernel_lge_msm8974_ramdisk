@@ -1,14 +1,5 @@
 # init.djl.rc
 
-on boot
-    #intelliplug
-    chmod 0222 /sys/kernel/intelli_plug/perf_boost
-    chown system system /sys/kernel/intelli_plug/perf_boost
-    chmod 0666 /sys/module/intelli_plug/parameters/nr_run_profile_sel
-    chown system system /sys/module/intelli_plug/parameters/nr_run_profile_sel
-    write /sys/module/intelli_plug/parameters/intelli_plug_active 1
-    write /sys/module/intelli_plug/parameters/screen_off_max 1497600
-
 # sysinit (/system/etc/init.d)
 service sysinit /system/bin/sysinit
     user root
